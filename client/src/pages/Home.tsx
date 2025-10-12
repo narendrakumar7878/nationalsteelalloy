@@ -3,6 +3,7 @@ import { Link } from "wouter";
 import Hero from "@/components/Hero";
 import ProductCard from "@/components/ProductCard";
 import ProductGallery from "@/components/ProductGallery";
+import Testimonials from "@/components/Testimonials";
 import { Button } from "@/components/ui/button";
 import { CheckCircle, Shield, Truck, Award } from "lucide-react";
 
@@ -127,6 +128,8 @@ export default function Home() {
       </section>
 
       <ProductGallery />
+
+      <Testimonials />
 
       <section className="py-20 bg-foreground text-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

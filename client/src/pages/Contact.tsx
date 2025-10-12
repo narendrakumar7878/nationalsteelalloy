@@ -18,8 +18,8 @@ export default function Contact() {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
           <Card className="p-6 hover-elevate">
             <div className="flex items-start gap-4">
               <div className="flex-shrink-0 w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
@@ -81,11 +81,16 @@ export default function Contact() {
               <h2 className="text-2xl font-bold">Our Location</h2>
             </div>
             <div className="space-y-2">
-              <p className="text-lg leading-relaxed">
+              <a 
+                href="https://www.google.com/maps/search/?api=1&query=45/49,+Gulam+Mohammad+Building,+M.S.+Bawan+Patel+Road,+Ramagalli,+Mumbai-400+004,+Maharashtra,+India"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-lg leading-relaxed hover:text-primary transition-colors block"
+              >
                 45/49, Gulam Mohammad Building,<br />
                 M.S. Bawan Patel Road, Ramagalli,<br />
                 Mumbai-400 004, Maharashtra, India
-              </p>
+              </a>
             </div>
           </Card>
 

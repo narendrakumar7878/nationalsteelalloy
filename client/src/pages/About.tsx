@@ -20,21 +20,14 @@ export default function About() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
           <div>
-            <h2 className="text-3xl font-bold mb-6">Who We Are</h2>
+            <h2 className="text-3xl font-bold mb-6">About Industry</h2>
             <div className="space-y-4 text-muted-foreground">
               <p>
-                NATIONAL STEEL & ALLOYS is a premier importer, stockist, and supplier of high-quality steel 
-                and alloy products. Under the leadership of our CEO, Champak Sain, we have established ourselves 
-                as a trusted name in the industry.
-              </p>
-              <p>
-                With over two decades of experience, we specialize in providing premium grade Stainless Steel, 
-                Alloy Steel, Carbon Steel, and Mild Steel products to industries across India. Our extensive 
-                inventory includes pipes, tubes, sheets, plates, round bars, flat bars, and more.
-              </p>
-              <p>
-                Located in Mumbai (GST No.: 27AJJPN4917B2Z9), we serve clients nationwide with a commitment 
-                to quality, reliability, and customer satisfaction.
+                NATIONAL STEEL & ALLOYS is one of the largest Manufacturers, Stockists, Suppliers, Importers, and Exporters 
+                of Stainless Steel, Carbon Steel, Alloy Steel, Mild Steel, High Nickel Alloys, Special Alloys, Aluminium Alloys, 
+                Copper Nickel, Titanium Alloys, Duplex & Super Duplex, Tantalum, Abrasion Resistant Steel, Hadfield Manganese Steel, 
+                Corten Steel, High Tensile, Quenched & Tempered Steel, Armour Steel, etc., in various forms and shapes such as 
+                Pipes, Tubes, Plates, Round Bars, Flanges, and Fittings.
               </p>
             </div>
           </div>
@@ -76,45 +69,24 @@ export default function About() {
         </div>
 
         <div className="mb-16">
-          <h2 className="text-3xl font-bold mb-8 text-center">Our Core Values</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div className="bg-primary/5 p-8 rounded-lg">
               <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4">
                 <Target className="w-8 h-8 text-primary" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Quality First</h3>
-              <p className="text-sm text-muted-foreground">
-                We never compromise on the quality of our products and services
+              <h2 className="text-2xl font-bold mb-4">Our Mission</h2>
+              <p className="text-muted-foreground">
+                We have the facility to produce advanced work for various industrial applications based on specially developed technology.
               </p>
             </div>
 
-            <div className="text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4">
-                <Users className="w-8 h-8 text-primary" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Customer Focus</h3>
-              <p className="text-sm text-muted-foreground">
-                Your satisfaction is our top priority in everything we do
-              </p>
-            </div>
-
-            <div className="text-center">
+            <div className="bg-primary/5 p-8 rounded-lg">
               <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4">
                 <TrendingUp className="w-8 h-8 text-primary" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Reliability</h3>
-              <p className="text-sm text-muted-foreground">
-                Consistent delivery and dependable service you can count on
-              </p>
-            </div>
-
-            <div className="text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4">
-                <Award className="w-8 h-8 text-primary" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Excellence</h3>
-              <p className="text-sm text-muted-foreground">
-                Striving for excellence in every aspect of our business
+              <h2 className="text-2xl font-bold mb-4">Our Vision</h2>
+              <p className="text-muted-foreground">
+                A complete account of our work system, and expound the actual teachings of the truth must explain to you how this mistaken idea praising.
               </p>
             </div>
           </div>
