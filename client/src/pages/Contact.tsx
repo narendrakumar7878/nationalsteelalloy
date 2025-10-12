@@ -1,5 +1,6 @@
 import { useEffect } from "react";
-import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Building2, FileText, User } from "lucide-react";
+import { Card } from "@/components/ui/card";
 
 export default function Contact() {
   useEffect(() => {
@@ -18,78 +19,107 @@ export default function Contact() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="max-w-4xl mx-auto">
-          <div>
-            <h2 className="text-3xl font-bold mb-6">Contact Information</h2>
-            
-            <div className="space-y-6 mb-8">
-              <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
-                  <Phone className="w-6 h-6 text-primary" />
-                </div>
-                <div>
-                  <h3 className="font-semibold mb-1">Phone</h3>
-                  <p className="text-muted-foreground">Mobile: 9769339987</p>
-                  <p className="text-muted-foreground">Tel: 022 6743 6635</p>
-                </div>
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+          <Card className="p-6 hover-elevate">
+            <div className="flex items-start gap-4">
+              <div className="flex-shrink-0 w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                <Phone className="w-6 h-6 text-primary" />
               </div>
-
-              <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
-                  <Mail className="w-6 h-6 text-primary" />
-                </div>
-                <div>
-                  <h3 className="font-semibold mb-1">Email</h3>
-                  <a href="mailto:nationalstainless@yahoo.com" className="text-muted-foreground hover:text-primary transition-colors">
-                    nationalstainless@yahoo.com
+              <div className="flex-1">
+                <h3 className="font-bold text-lg mb-2">Phone</h3>
+                <p className="text-muted-foreground mb-1">
+                  <a href="tel:9769339987" className="hover:text-primary transition-colors">
+                    Mobile: 9769339987
                   </a>
+                </p>
+                <p className="text-muted-foreground">
+                  <a href="tel:02267436635" className="hover:text-primary transition-colors">
+                    Tel: 022 6743 6635
+                  </a>
+                </p>
+              </div>
+            </div>
+          </Card>
+
+          <Card className="p-6 hover-elevate">
+            <div className="flex items-start gap-4">
+              <div className="flex-shrink-0 w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                <Mail className="w-6 h-6 text-primary" />
+              </div>
+              <div className="flex-1">
+                <h3 className="font-bold text-lg mb-2">Email</h3>
+                <a 
+                  href="mailto:nationalstainless@yahoo.com" 
+                  className="text-muted-foreground hover:text-primary transition-colors break-all"
+                >
+                  nationalstainless@yahoo.com
+                </a>
+              </div>
+            </div>
+          </Card>
+
+          <Card className="p-6 hover-elevate">
+            <div className="flex items-start gap-4">
+              <div className="flex-shrink-0 w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                <Clock className="w-6 h-6 text-primary" />
+              </div>
+              <div className="flex-1">
+                <h3 className="font-bold text-lg mb-2">Business Hours</h3>
+                <p className="text-muted-foreground mb-1">Mon - Sat: 9 AM - 6 PM</p>
+                <p className="text-muted-foreground">Sunday: Closed</p>
+              </div>
+            </div>
+          </Card>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <Card className="p-8">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="flex-shrink-0 w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center">
+                <MapPin className="w-7 h-7 text-primary" />
+              </div>
+              <h2 className="text-2xl font-bold">Our Location</h2>
+            </div>
+            <div className="space-y-2">
+              <p className="text-lg leading-relaxed">
+                45/49, Gulam Mohammad Building,<br />
+                M.S. Bawan Patel Road, Ramagalli,<br />
+                Mumbai-400 004, Maharashtra, India
+              </p>
+            </div>
+          </Card>
+
+          <Card className="p-8">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="flex-shrink-0 w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center">
+                <Building2 className="w-7 h-7 text-primary" />
+              </div>
+              <h2 className="text-2xl font-bold">Company Details</h2>
+            </div>
+            <div className="space-y-4">
+              <div className="flex items-start gap-3">
+                <Building2 className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
+                <div>
+                  <p className="text-sm text-muted-foreground">Company Name</p>
+                  <p className="font-semibold">NATIONAL STEEL & ALLOYS</p>
                 </div>
               </div>
-
-              <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
-                  <MapPin className="w-6 h-6 text-primary" />
-                </div>
+              <div className="flex items-start gap-3">
+                <FileText className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
                 <div>
-                  <h3 className="font-semibold mb-1">Address</h3>
-                  <p className="text-muted-foreground">
-                    45/49, Gulam Mohammad Building,<br />
-                    M.S. Bawan Patel Road, Ramagalli,<br />
-                    Mumbai-400 004, Maharashtra, India
-                  </p>
+                  <p className="text-sm text-muted-foreground">GST Number</p>
+                  <p className="font-semibold">27AJJPN4917B2Z9</p>
                 </div>
               </div>
-
-              <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
-                  <Clock className="w-6 h-6 text-primary" />
-                </div>
+              <div className="flex items-start gap-3">
+                <User className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
                 <div>
-                  <h3 className="font-semibold mb-1">Business Hours</h3>
-                  <p className="text-muted-foreground">Monday - Saturday: 9:00 AM - 6:00 PM</p>
-                  <p className="text-muted-foreground">Sunday: Closed</p>
+                  <p className="text-sm text-muted-foreground">CEO</p>
+                  <p className="font-semibold">Champak Sain</p>
                 </div>
               </div>
             </div>
-
-            <div className="bg-card p-6 rounded-lg border border-card-border">
-              <h3 className="font-bold text-lg mb-3">Company Details</h3>
-              <div className="space-y-2 text-sm">
-                <div className="flex justify-between">
-                  <span className="text-muted-foreground">Company Name:</span>
-                  <span className="font-medium">NATIONAL STEEL & ALLOYS</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-muted-foreground">GST Number:</span>
-                  <span className="font-medium">27AJJPN4917B2Z9</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-muted-foreground">CEO:</span>
-                  <span className="font-medium">Champak Sain</span>
-                </div>
-              </div>
-            </div>
-          </div>
+          </Card>
         </div>
       </div>
     </div>

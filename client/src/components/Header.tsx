@@ -29,7 +29,7 @@ export default function Header() {
             </div>
           </Link>
 
-          <nav className="hidden md:flex items-center gap-1">
+          <nav className="hidden lg:flex items-center gap-1">
             {navLinks.map((link) => (
               <Link key={link.href} href={link.href} data-testid={`link-${link.label.toLowerCase()}`}>
                 <Button
@@ -52,7 +52,7 @@ export default function Header() {
 
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden text-background"
+            className="lg:hidden text-background"
             data-testid="button-mobile-menu"
             aria-label="Toggle menu"
           >
@@ -62,7 +62,7 @@ export default function Header() {
       </div>
 
       {mobileMenuOpen && (
-        <div className="md:hidden bg-foreground border-t border-border">
+        <div className="lg:hidden bg-foreground border-t border-border">
           <div className="px-4 py-4 space-y-2">
             {navLinks.map((link) => (
               <Link key={link.href} href={link.href}>

@@ -1,11 +1,33 @@
+import { useState, useEffect } from "react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Phone } from "lucide-react";
 
+const heroImages = [
+  "/assets/pipes.jpg",
+  "/assets/sheets-plates.jpg",
+  "/assets/round-bars.jpg",
+  "/assets/flanges.jpg",
+  "/assets/angles.jpg"
+];
+
 export default function Hero() {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % heroImages.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section className="relative min-h-[600px] flex items-center justify-center bg-gradient-to-br from-foreground via-foreground/95 to-foreground/90 overflow-hidden">
-      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1920')] bg-cover bg-center opacity-10"></div>
+      <div 
+        className="absolute inset-0 bg-cover bg-center opacity-10 transition-opacity duration-1000"
+        style={{ backgroundImage: `url(${heroImages[currentImageIndex]})` }}
+      ></div>
       
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
         <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-background mb-6">
