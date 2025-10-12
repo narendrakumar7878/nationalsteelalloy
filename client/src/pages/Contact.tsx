@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import ContactForm from "@/components/ContactForm";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 
 export default function Contact() {
@@ -19,15 +18,7 @@ export default function Contact() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          <div>
-            <h2 className="text-3xl font-bold mb-6">Send Us a Message</h2>
-            <p className="text-muted-foreground mb-8">
-              Fill out the form below and our team will get back to you within 24 hours.
-            </p>
-            <ContactForm />
-          </div>
-
+        <div className="max-w-4xl mx-auto">
           <div>
             <h2 className="text-3xl font-bold mb-6">Contact Information</h2>
             

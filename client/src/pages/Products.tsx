@@ -6,78 +6,99 @@ import { Search } from "lucide-react";
 
 const allProducts = [
   {
+    title: "SS Sheets & Plates",
+    category: "Stainless Steel",
+    description: "High-quality stainless steel sheets and plates in various grades and thicknesses",
+    image: "/assets/sheets-plates.jpg",
+    grades: "304, 304L, 316, 316L, 310s, 904L"
+  },
+  {
     title: "SS Welded Pipes",
     category: "Stainless Steel",
     description: "High-quality welded stainless steel pipes for industrial applications",
-    image: "https://images.unsplash.com/photo-1587293852726-70cdb56c2866?w=800",
+    image: "/assets/pipes.jpg",
     grades: "304, 304L, 316, 316L"
   },
   {
     title: "SS Seamless Pipes",
     category: "Stainless Steel",
     description: "Premium seamless pipes for high-pressure applications",
-    image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800",
+    image: "/assets/pipes.jpg",
     grades: "304, 316, 310, 321"
-  },
-  {
-    title: "SS Sheets & Plates",
-    category: "Stainless Steel",
-    description: "Durable stainless steel sheets and plates in various thicknesses",
-    image: "https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=800",
-    grades: "304, 316L, 310s, 904L"
   },
   {
     title: "SS Round Bars",
     category: "Stainless Steel",
     description: "Precision-engineered stainless steel round bars",
-    image: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800",
-    grades: "303, 304, 316, 321H"
+    image: "/assets/round-bars.jpg",
+    grades: "303, 304, 316, 321H, 347"
+  },
+  {
+    title: "SS Flanges",
+    category: "Stainless Steel",
+    description: "High-quality stainless steel flanges for piping connections",
+    image: "/assets/flanges.jpg",
+    grades: "ANSI B16.5, DIN, BS Standards"
+  },
+  {
+    title: "Steel Angles",
+    category: "Structural Steel",
+    description: "Durable steel angles for construction and structural applications",
+    image: "/assets/angles.jpg",
+    grades: "IS2062, ASTM A36, EN Standards"
   },
   {
     title: "Alloy Steel Plates",
     category: "Alloy Steel",
     description: "High-strength alloy steel plates for demanding applications",
-    image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800",
-    grades: "EN19, C45, 16Mo3"
+    image: "/assets/sheets-plates.jpg",
+    grades: "EN19, C45, 16Mo3, SA387"
   },
   {
-    title: "Hardox Plates",
+    title: "Alloy Steel Round Bars",
     category: "Alloy Steel",
-    description: "Wear-resistant steel plates for extreme conditions",
-    image: "https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=800",
-    grades: "Hardox 400, 500, 600"
+    description: "Premium alloy steel round bars for specialized applications",
+    image: "/assets/round-bars.jpg",
+    grades: "EN19, C45, Hardox, Rockstar"
   },
   {
     title: "Carbon Steel Pipes",
     category: "Carbon Steel",
     description: "Reliable carbon steel pipes for various industrial uses",
-    image: "https://images.unsplash.com/photo-1587293852726-70cdb56c2866?w=800",
+    image: "/assets/pipes.jpg",
     grades: "EN8, EN9, EN24"
   },
   {
     title: "Carbon Steel Plates",
     category: "Carbon Steel",
     description: "Heavy-duty carbon steel plates for construction",
-    image: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800",
-    grades: "100CR6, 52100"
+    image: "/assets/sheets-plates.jpg",
+    grades: "100CR6, 52100, EN Series"
   },
   {
     title: "Mild Steel Sheets",
     category: "Mild Steel",
     description: "Cost-effective mild steel sheets for general purposes",
-    image: "https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=800",
+    image: "/assets/sheets-plates.jpg",
     grades: "IS2062 E250, E350"
   },
   {
     title: "MS Round Bars",
     category: "Mild Steel",
     description: "Standard mild steel round bars for fabrication",
-    image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800",
+    image: "/assets/round-bars.jpg",
     grades: "IS2062 E450"
+  },
+  {
+    title: "MS Angles",
+    category: "Mild Steel",
+    description: "Mild steel angles for construction and fabrication work",
+    image: "/assets/angles.jpg",
+    grades: "IS2062 Standards"
   }
 ];
 
-const categories = ["All", "Stainless Steel", "Alloy Steel", "Carbon Steel", "Mild Steel"];
+const categories = ["All", "Stainless Steel", "Alloy Steel", "Carbon Steel", "Mild Steel", "Structural Steel"];
 
 export default function Products() {
   const [selectedCategory, setSelectedCategory] = useState("All");

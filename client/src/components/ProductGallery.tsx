@@ -10,24 +10,29 @@ interface GalleryImage {
 
 const galleryImages: GalleryImage[] = [
   {
-    url: "https://images.unsplash.com/photo-1587293852726-70cdb56c2866?w=1200",
-    title: "Stainless Steel Products",
+    url: "/assets/pipes.jpg",
+    title: "Stainless Steel Pipes",
     description: "Premium quality stainless steel pipes and tubes"
   },
   {
-    url: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=1200",
-    title: "Industrial Manufacturing",
-    description: "State-of-the-art steel processing facilities"
+    url: "/assets/sheets-plates.jpg",
+    title: "Sheets & Plates",
+    description: "High-quality steel sheets and plates in various grades"
   },
   {
-    url: "https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=1200",
-    title: "Quality Assurance",
-    description: "Rigorous testing and quality control"
+    url: "/assets/round-bars.jpg",
+    title: "Round Bars",
+    description: "Precision-engineered stainless steel round bars"
   },
   {
-    url: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1200",
-    title: "Carbon Steel Range",
-    description: "Extensive range of carbon steel products"
+    url: "/assets/flanges.jpg",
+    title: "Flanges",
+    description: "Quality stainless steel flanges for industrial use"
+  },
+  {
+    url: "/assets/angles.jpg",
+    title: "Steel Angles",
+    description: "Structural steel angles for construction"
   }
 ];
 

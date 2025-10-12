@@ -8,32 +8,39 @@ import { CheckCircle, Shield, Truck, Award } from "lucide-react";
 
 const products = [
   {
-    title: "Stainless Steel",
-    category: "Premium Grade",
-    description: "High-quality stainless steel products including pipes, tubes, sheets, and plates",
-    image: "https://images.unsplash.com/photo-1587293852726-70cdb56c2866?w=800",
+    title: "Sheets & Plates",
+    category: "Stainless Steel",
+    description: "High-quality stainless steel sheets and plates in various grades and thicknesses",
+    image: "/assets/sheets-plates.jpg",
     grades: "Available: 304, 304L, 316, 316L, 310, 321, 347, 904L"
   },
   {
-    title: "Alloy Steel",
-    category: "Specialized",
-    description: "Premium alloy steel products for demanding industrial applications",
-    image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800",
-    grades: "Grades: EN19, C45, 16Mo3, SA387, Hardox, Rockstar"
+    title: "Pipes",
+    category: "Stainless Steel",
+    description: "Premium stainless steel pipes - welded and seamless for industrial applications",
+    image: "/assets/pipes.jpg",
+    grades: "Grades: 304, 316, 310, 321 - Welded & Seamless"
   },
   {
-    title: "Carbon Steel",
-    category: "Industrial",
-    description: "Reliable carbon steel products for construction and manufacturing",
-    image: "https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=800",
-    grades: "Grades: EN8, EN9, EN24, 100CR6, 52100"
+    title: "Round Bars",
+    category: "Stainless Steel",
+    description: "Precision-engineered stainless steel round bars for manufacturing",
+    image: "/assets/round-bars.jpg",
+    grades: "Grades: 303, 304, 316, 321H, 347"
   },
   {
-    title: "Mild Steel",
-    category: "Standard",
-    description: "Cost-effective mild steel solutions for various applications",
-    image: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800",
-    grades: "IS2062: E250, E350, E450 series"
+    title: "Flanges",
+    category: "Stainless Steel",
+    description: "High-quality stainless steel flanges for piping connections",
+    image: "/assets/flanges.jpg",
+    grades: "ANSI B16.5, DIN, BS Standards"
+  },
+  {
+    title: "Angles",
+    category: "Structural Steel",
+    description: "Durable steel angles for construction and structural applications",
+    image: "/assets/angles.jpg",
+    grades: "IS2062, ASTM A36, EN Standards"
   }
 ];
 
