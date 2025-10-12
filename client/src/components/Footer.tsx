@@ -98,26 +98,8 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-background/20 mt-8 pt-8">
-          <div className="mb-8">
-            <h4 className="text-primary font-semibold mb-4 text-center">Find Us</h4>
-            <div className="relative w-full h-64 rounded-lg overflow-hidden">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3773.7346831743546!2d72.83447!3d18.95098!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTjCsDU3JzAzLjUiTiA3MsKwNTAnMDQuMSJF!5e0!3m2!1sen!2sin!4v1234567890"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="NATIONAL STEEL & ALLOYS Location"
-              ></iframe>
-            </div>
-          </div>
-          
-          <div className="text-center text-sm text-background/60">
-            <p>&copy; {new Date().getFullYear()} NATIONAL STEEL & ALLOYS. All rights reserved.</p>
-          </div>
+        <div className="border-t border-background/20 mt-8 pt-8 text-center text-sm text-background/60">
+          <p>&copy; {new Date().getFullYear()} NATIONAL STEEL & ALLOYS. All rights reserved.</p>
         </div>
       </div>
     </footer>

@@ -4,25 +4,21 @@ import { Quote } from "lucide-react";
 const testimonials = [
   {
     name: "Rajesh Kumar",
-    company: "Kumar Engineering Works",
     location: "Mumbai",
     text: "NATIONAL STEEL & ALLOYS has been our trusted supplier for over 5 years. Their quality products and timely delivery have helped us maintain our production schedules consistently."
   },
   {
     name: "Priya Sharma",
-    company: "Sharma Industries",
     location: "Pune",
     text: "Excellent service and competitive pricing! The team is very knowledgeable and always helps us find the right steel grades for our specific requirements."
   },
   {
     name: "Anil Patel",
-    company: "Patel Construction",
     location: "Ahmedabad",
     text: "We've been sourcing our structural steel from NATIONAL STEEL & ALLOYS for years. Their product quality is unmatched, and the documentation is always perfect."
   },
   {
     name: "Suresh Menon",
-    company: "Menon Fabricators",
     location: "Mumbai",
     text: "Outstanding quality and service! They always have the materials we need in stock, and their technical support team is extremely helpful."
   }
@@ -48,8 +44,7 @@ export default function Testimonials() {
               </p>
               <div className="border-t pt-4">
                 <p className="font-semibold">{testimonial.name}</p>
-                <p className="text-sm text-muted-foreground">{testimonial.company}</p>
-                <p className="text-xs text-muted-foreground">{testimonial.location}</p>
+                <p className="text-sm text-muted-foreground">{testimonial.location}</p>
               </div>
             </Card>
           ))}
