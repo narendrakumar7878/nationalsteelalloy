@@ -1,5 +1,6 @@
 import { Link } from "wouter";
 import { Phone, Mail, MapPin } from "lucide-react";
+import { FaLinkedin, FaInstagram, FaGithub } from "react-icons/fa6";
 
 export default function Footer() {
   return (
@@ -8,7 +9,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <img src="/assets/logo.png" alt="NATIONAL STEEL & ALLOYS" className="h-12 w-auto" />
+              <img src="/assets/logo-removebg-preview.png" alt="NATIONAL STEEL & ALLOYS" className="h-12 w-auto" />
             </div>
             <h3 className="text-primary font-bold text-lg mb-2">NATIONAL STEEL & ALLOYS</h3>
             <p className="text-background/80 text-sm mb-2">GST No.: 27AJJPN4917B2Z9</p>
@@ -85,7 +86,7 @@ export default function Footer() {
               <div className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
                 <a 
-                  href="https://www.google.com/maps/search/?api=1&query=45/49,+Gulam+Mohammad+Building,+M.S.+Bawan+Patel+Road,+Ramagalli,+Mumbai-400+004"
+                  href="https://www.google.com/maps/place/National+Steel+And+Alloys/@18.9607373,72.8283202,17z/data=!3m1!4b1!4m6!3m5!1s0x3be7cf43a4fda459:0x341ceceeca195176!8m2!3d18.9607373!4d72.8283202!16s%2Fg%2F11b80c5_z"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-background/80 hover:text-primary transition-colors" 
@@ -98,8 +99,53 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-background/20 mt-8 pt-8 text-center text-sm text-background/60">
+        <div className="border-t border-background/20 mt-8 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-background/70">
           <p>&copy; {new Date().getFullYear()} NATIONAL STEEL & ALLOYS. All rights reserved.</p>
+          <div className="flex flex-wrap items-center gap-3">
+            <span>
+              Developed by{" "}
+              <a 
+                href="https://www.linkedin.com/in/narendrakumar7878/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-primary font-semibold hover:underline transition-all"
+              >
+                Narendra Prajapati
+              </a>
+            </span>
+            <div className="flex items-center gap-2">
+              <a 
+                href="https://www.linkedin.com/in/narendrakumar7878/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-8 h-8 rounded-full bg-background/10 hover:bg-primary hover:text-white flex items-center justify-center transition-colors"
+                title="LinkedIn"
+                aria-label="LinkedIn Profile"
+              >
+                <FaLinkedin className="w-4 h-4" />
+              </a>
+              <a 
+                href="https://www.instagram.com/n_b_parmar_6677/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-8 h-8 rounded-full bg-background/10 hover:bg-primary hover:text-white flex items-center justify-center transition-colors"
+                title="Instagram"
+                aria-label="Instagram Profile"
+              >
+                <FaInstagram className="w-4 h-4" />
+              </a>
+              <a 
+                href="https://github.com/narendrakumar7878" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-8 h-8 rounded-full bg-background/10 hover:bg-primary hover:text-white flex items-center justify-center transition-colors"
+                title="GitHub"
+                aria-label="GitHub Profile"
+              >
+                <FaGithub className="w-4 h-4" />
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </footer>

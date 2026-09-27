@@ -22,7 +22,7 @@ export default function Header() {
         <div className="flex items-center justify-between h-16">
           <Link href="/" data-testid="link-home">
             <div className="flex items-center gap-3 cursor-pointer">
-              <img src="/assets/logo.png" alt="NATIONAL STEEL & ALLOYS Logo" className="h-10 w-auto" />
+              <img src="/assets/logo-removebg-preview.png" alt="NATIONAL STEEL & ALLOYS Logo" className="h-10 w-auto" />
               <div className="flex flex-col">
                 <span className="text-primary font-bold text-sm sm:text-base leading-tight">NATIONAL STEEL & ALLOYS</span>
               </div>

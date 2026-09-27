@@ -82,7 +82,7 @@ export default function Contact() {
             </div>
             <div className="space-y-2">
               <a 
-                href="https://www.google.com/maps/search/?api=1&query=45/49,+Gulam+Mohammad+Building,+M.S.+Bawan+Patel+Road,+Ramagalli,+Mumbai-400+004,+Maharashtra,+India"
+                href="https://www.google.com/maps/place/National+Steel+And+Alloys/@18.9607373,72.8283202,17z/data=!3m1!4b1!4m6!3m5!1s0x3be7cf43a4fda459:0x341ceceeca195176!8m2!3d18.9607373!4d72.8283202!16s%2Fg%2F11b80c5_z"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-lg leading-relaxed hover:text-primary transition-colors block"

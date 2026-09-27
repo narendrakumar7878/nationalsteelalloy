@@ -10,13 +10,13 @@ export default function Map() {
         </div>
         <div className="relative w-full h-96 rounded-lg overflow-hidden shadow-lg">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3773.7346831743546!2d72.83447!3d18.95098!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTjCsDU3JzAzLjUiTiA3MsKwNTAnMDQuMSJF!5e0!3m2!1sen!2sin!4v1234567890"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3773.33657755162!2d72.8283202!3d18.960737299999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7cf43a4fda459%3A0x341ceceeca195176!2sNational%20Steel%20And%20Alloys!5e0!3m2!1sen!2sin!4v1790441268151!5m2!1sen!2sin"
             width="100%"
             height="100%"
             style={{ border: 0 }}
             allowFullScreen
             loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
+            referrerPolicy="strict-origin-when-cross-origin"
             title="NATIONAL STEEL & ALLOYS Location"
           ></iframe>
         </div>
