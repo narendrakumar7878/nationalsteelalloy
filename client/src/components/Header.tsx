@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const navLinks = [
@@ -15,6 +15,19 @@ const navLinks = [
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [location] = useLocation();
+
+  // Lock body scroll when mobile menu is open
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [mobileMenuOpen]);
 
   return (
     <header className="sticky top-0 z-50 bg-foreground border-b border-border">
@@ -42,34 +55,31 @@ export default function Header() {
                 </Button>
               </Link>
             ))}
-            <Link href="/contact">
-              <Button variant="default" size="sm" className="ml-4" data-testid="button-get-quote">
-                <Phone className="w-4 h-4 mr-2" />
-                Get Quote
-              </Button>
-            </Link>
           </nav>
 
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden text-background"
+            className="lg:hidden text-background p-2 focus:outline-none"
             data-testid="button-mobile-menu"
             aria-label="Toggle menu"
           >
-            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {mobileMenuOpen ? <X className="w-7 h-7 text-primary" /> : <Menu className="w-7 h-7" />}
           </button>
         </div>
       </div>
 
+      {/* Full-Screen Overlay Mobile Menu (Items Centered & Body Scroll Locked) */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-foreground border-t border-border">
-          <div className="px-4 py-4 space-y-2">
+        <div className="fixed inset-x-0 top-16 bottom-0 lg:hidden bg-foreground/95 backdrop-blur-xl z-50 flex flex-col items-center justify-center p-6 border-t border-border/50 animate-in fade-in duration-200">
+          <div className="w-full max-w-sm flex flex-col items-center justify-center space-y-4">
             {navLinks.map((link) => (
-              <Link key={link.href} href={link.href}>
+              <Link key={link.href} href={link.href} className="w-full">
                 <button
                   onClick={() => setMobileMenuOpen(false)}
-                  className={`block w-full text-left px-4 py-3 rounded-md text-background hover:bg-primary/10 hover:text-primary transition-colors ${
-                    location === link.href ? "bg-primary/20 text-primary" : ""
+                  className={`w-full py-3.5 px-6 rounded-xl text-center font-bold text-xl tracking-wide transition-all ${
+                    location === link.href 
+                      ? "bg-primary text-primary-foreground shadow-lg scale-105" 
+                      : "text-background/90 hover:bg-primary/20 hover:text-primary"
                   }`}
                   data-testid={`mobile-link-${link.label.toLowerCase()}`}
                 >
@@ -77,12 +87,6 @@ export default function Header() {
                 </button>
               </Link>
             ))}
-            <Link href="/contact">
-              <Button variant="default" className="w-full mt-4" data-testid="button-mobile-get-quote">
-                <Phone className="w-4 h-4 mr-2" />
-                Get Quote
-              </Button>
-            </Link>
           </div>
         </div>
       )}

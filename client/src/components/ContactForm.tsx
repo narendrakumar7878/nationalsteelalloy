@@ -18,7 +18,11 @@ const contactSchema = z.object({
 
 type ContactFormData = z.infer<typeof contactSchema>;
 
-export default function ContactForm() {
+interface ContactFormProps {
+  defaultProduct?: string;
+}
+
+export default function ContactForm({ defaultProduct }: ContactFormProps) {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
@@ -28,7 +32,7 @@ export default function ContactForm() {
       name: "",
       email: "",
       phone: "",
-      message: "",
+      message: defaultProduct ? `Hello, I am interested in inquiring about ${defaultProduct}. Please share pricing, grade specs, and delivery time.` : "",
     },
   });
 

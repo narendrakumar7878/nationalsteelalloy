@@ -31,8 +31,11 @@ export default function Hero() {
       
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
         <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-background mb-6">
+          <span className="block text-primary text-xl sm:text-2xl lg:text-3xl font-bold tracking-widest uppercase mb-3 text-emerald-400">
+            NATIONAL STEEL &amp; ALLOYS
+          </span>
           Leading Supplier of
-          <span className="block text-primary mt-2">Steel & Alloys</span>
+          <span className="block text-primary mt-1">Steel &amp; Alloys</span>
         </h1>
         
         <p className="text-lg sm:text-xl text-background/90 max-w-3xl mx-auto mb-8">
@@ -53,21 +56,6 @@ export default function Hero() {
               <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
           </Link>
-        </div>
-
-        <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
-          <div className="text-center">
-            <div className="text-3xl font-bold text-primary">20+</div>
-            <div className="text-background/80 mt-1">Years Experience</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold text-primary">500+</div>
-            <div className="text-background/80 mt-1">Happy Clients</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold text-primary">100%</div>
-            <div className="text-background/80 mt-1">Quality Assured</div>
-          </div>
         </div>
       </div>
     </section>

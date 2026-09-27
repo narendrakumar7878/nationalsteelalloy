@@ -16,55 +16,58 @@ export default function Footer() {
             <p className="text-background/80 text-sm">CEO: Champak Sain</p>
           </div>
 
-          <div>
-            <h4 className="text-primary font-semibold mb-4">Quick Links</h4>
-            <ul className="space-y-2">
-              {["Home", "About", "Products", "Services", "Projects", "Contact"].map((item) => (
-                <li key={item}>
-                  <Link href={item === "Home" ? "/" : `/${item.toLowerCase()}`}>
-                    <span className="text-background/80 hover:text-primary cursor-pointer transition-colors text-sm" data-testid={`footer-link-${item.toLowerCase()}`}>
-                      {item}
-                    </span>
+          {/* Quick Links & Products - Side by Side on Mobile */}
+          <div className="grid grid-cols-2 gap-4 col-span-1 md:col-span-1 lg:col-span-2 md:grid-cols-2">
+            <div>
+              <h4 className="text-primary font-semibold mb-4">Quick Links</h4>
+              <ul className="space-y-2">
+                {["Home", "About", "Products", "Services", "Projects", "Contact"].map((item) => (
+                  <li key={item}>
+                    <Link href={item === "Home" ? "/" : `/${item.toLowerCase()}`}>
+                      <span className="text-background/80 hover:text-primary cursor-pointer transition-colors text-sm" data-testid={`footer-link-${item.toLowerCase()}`}>
+                        {item}
+                      </span>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="text-primary font-semibold mb-4">Products</h4>
+              <ul className="space-y-2 text-sm text-background/80">
+                <li>
+                  <Link href="/products">
+                    <span className="hover:text-primary cursor-pointer transition-colors">Stainless Steel</span>
                   </Link>
                 </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="text-primary font-semibold mb-4">Products</h4>
-            <ul className="space-y-2 text-sm text-background/80">
-              <li>
-                <Link href="/products">
-                  <span className="hover:text-primary cursor-pointer transition-colors">Stainless Steel</span>
-                </Link>
-              </li>
-              <li>
-                <Link href="/products">
-                  <span className="hover:text-primary cursor-pointer transition-colors">Alloy Steel</span>
-                </Link>
-              </li>
-              <li>
-                <Link href="/products">
-                  <span className="hover:text-primary cursor-pointer transition-colors">Carbon Steel</span>
-                </Link>
-              </li>
-              <li>
-                <Link href="/products">
-                  <span className="hover:text-primary cursor-pointer transition-colors">Mild Steel</span>
-                </Link>
-              </li>
-              <li>
-                <Link href="/products">
-                  <span className="hover:text-primary cursor-pointer transition-colors">Pipes & Tubes</span>
-                </Link>
-              </li>
-              <li>
-                <Link href="/products">
-                  <span className="hover:text-primary cursor-pointer transition-colors">Sheets & Plates</span>
-                </Link>
-              </li>
-            </ul>
+                <li>
+                  <Link href="/products">
+                    <span className="hover:text-primary cursor-pointer transition-colors">Alloy Steel</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/products">
+                    <span className="hover:text-primary cursor-pointer transition-colors">Carbon Steel</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/products">
+                    <span className="hover:text-primary cursor-pointer transition-colors">Mild Steel</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/products">
+                    <span className="hover:text-primary cursor-pointer transition-colors">Pipes & Tubes</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/products">
+                    <span className="hover:text-primary cursor-pointer transition-colors">Sheets & Plates</span>
+                  </Link>
+                </li>
+              </ul>
+            </div>
           </div>
 
           <div>
@@ -79,8 +82,25 @@ export default function Footer() {
               </div>
               <div className="flex items-start gap-2">
                 <Mail className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
-                <a href="mailto:nationalstainless@yahoo.com" className="text-background/80 hover:text-primary transition-colors" data-testid="link-email">
-                  nationalstainless@yahoo.com
+                <div>
+                  <a href="mailto:info@nationalsteelalloys.com" className="text-background/90 hover:text-primary transition-colors block font-medium" data-testid="link-email">
+                    info@nationalsteelalloys.com
+                  </a>
+                  <a href="mailto:nationalstainless@yahoo.com" className="text-background/70 hover:text-primary transition-colors text-xs block">
+                    nationalstainless@yahoo.com
+                  </a>
+                </div>
+              </div>
+              <div className="flex items-start gap-2">
+                <FaInstagram className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                <a 
+                  href="https://www.instagram.com/national_steel_alloys/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-background/80 hover:text-primary transition-colors"
+                  data-testid="link-footer-instagram"
+                >
+                  @national_steel_alloys
                 </a>
               </div>
               <div className="flex items-start gap-2">

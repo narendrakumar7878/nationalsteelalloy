@@ -1,116 +1,165 @@
-import { useEffect } from "react";
+import SEO from "@/components/SEO";
 import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { useLocation } from "wouter";
+import { ArrowRight, Building2 } from "lucide-react";
 
 const projects = [
   {
-    title: "Industrial Plant Installation",
+    title: "Chemical Plant Reactor Installation",
     category: "Manufacturing",
-    description: "Supply of stainless steel pipes and fittings for a major chemical processing plant in Maharashtra",
+    description: "Supplied SS 316L high-corrosion resistant plates and seamless pipes for a major chemical processing plant in Gujarat.",
+    productId: "ss-plate",
+    productName: "SS 316L Plate & Pipes",
     image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800"
   },
   {
-    title: "Commercial Construction",
+    title: "Commercial High-Rise Infrastructure",
     category: "Infrastructure",
-    description: "Carbon steel structural components for a large commercial building project in Mumbai",
+    description: "Carbon steel structural components and IS2062 plates supplied for a 45-story commercial building project in Mumbai.",
+    productId: "carbon-steel",
+    productName: "Carbon Steel IS2062",
     image: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800"
   },
   {
-    title: "Oil & Gas Pipeline",
+    title: "Offshore Refinery & Gas Pipeline",
     category: "Energy",
-    description: "High-grade alloy steel pipes for oil and gas pipeline infrastructure project",
+    description: "High-pressure ASTM A106 carbon steel seamless pipes & ANSI B16.5 weld neck flanges for offshore oil & gas pipeline.",
+    productId: "cs-flanges",
+    productName: "CS Flanges & Pipes",
     image: "https://images.unsplash.com/photo-1587293852726-70cdb56c2866?w=800"
   },
   {
-    title: "Mining Equipment",
+    title: "Mining Bucket Liners & Excavator Wear Plates",
     category: "Mining",
-    description: "Hardox wear-resistant steel plates for heavy-duty mining equipment manufacturing",
+    description: "Hardox 400 & EN24 wear-resistant steel plates for heavy-duty earthmoving equipment manufacturing in Jharkhand.",
+    productId: "alloy-steel",
+    productName: "Hardox Wear Plates",
     image: "https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=800"
   },
   {
-    title: "Food Processing Unit",
+    title: "Dairy & Food Processing Facility",
     category: "Food Industry",
-    description: "Hygienic stainless steel products for food processing and packaging facility",
+    description: "Hygienic 2B finish SS 304 stainless steel sheets & electro-polished tubes for milk processing & bottling line.",
+    productId: "ss-sheet",
+    productName: "SS 304 Hygienic Sheets",
     image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800"
   },
   {
-    title: "Power Plant Components",
+    title: "Thermal Power Station Turbine Overhaul",
     category: "Power Generation",
-    description: "Specialized alloy steel components for thermal power generation facility",
+    description: "Specialized heat-resistant SS 321H round bars & alloy steel EN19 turbine components supplied for power plant.",
+    productId: "ss-round-bar",
+    productName: "SS 321H Round Bars",
     image: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800"
   }
 ];
 
 export default function Projects() {
-  useEffect(() => {
-    document.title = "Projects - NATIONAL STEEL & ALLOYS";
-  }, []);
+  const [, setLocation] = useLocation();
+
+  const projectsSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Industrial Projects Delivered by NATIONAL STEEL & ALLOYS",
+    "itemListElement": projects.map((p, i) => ({
+      "@type": "ListItem",
+      "position": i + 1,
+      "item": {
+        "@type": "CreativeWork",
+        "name": p.title,
+        "description": p.description
+      }
+    }))
+  };
 
   return (
     <div className="min-h-screen">
-      <div className="bg-foreground text-background py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl sm:text-5xl font-bold mb-4">Our Projects</h1>
+      <SEO
+        title="Industrial Projects & Client Success - NATIONAL STEEL & ALLOYS"
+        description="Explore major engineering, construction, oil & gas, mining, and chemical projects supplied with premium steel and alloy products by NATIONAL STEEL & ALLOYS."
+        keywords="Steel projects India, Chemical plant SS plates, Mining Hardox plates, Power plant alloy steel, NATIONAL STEEL & ALLOYS projects"
+        jsonLd={projectsSchema}
+      />
+
+      <div className="relative bg-foreground text-background py-20 overflow-hidden bg-cover bg-center" style={{ backgroundImage: "url('/assets/flanges.jpg')" }}>
+        <div className="absolute inset-0 bg-gradient-to-r from-foreground/95 via-foreground/85 to-foreground/75 backdrop-blur-[2px]" />
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h1 className="text-4xl sm:text-5xl font-bold mb-4">Our Projects & Applications</h1>
           <p className="text-xl text-background/90">
-            Successful delivery of quality steel products across diverse industries
+            Proven track record of supplying certified steel & alloy materials across major Indian industries
           </p>
         </div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="mb-12">
-          <p className="text-muted-foreground text-center max-w-3xl mx-auto">
-            Over the years, we have successfully supplied premium steel and alloy products to numerous 
-            projects across various sectors including manufacturing, construction, energy, and infrastructure.
+        <div className="mb-12 text-center max-w-3xl mx-auto">
+          <p className="text-muted-foreground text-base leading-relaxed">
+            For over two decades, NATIONAL STEEL & ALLOYS has been the primary vendor of choice for complex structural, chemical, power, and infrastructure projects across India. Click any project to view product details.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <Card key={index} className="overflow-hidden hover-elevate active-elevate-2 cursor-pointer" data-testid={`card-project-${index}`}>
-              <div className="aspect-[4/3] overflow-hidden">
+            <Card 
+              key={index} 
+              className="overflow-hidden hover-elevate cursor-pointer group"
+              onClick={() => setLocation(`/product/${project.productId}`)}
+              data-testid={`card-project-${index}`}
+            >
+              <div className="aspect-[4/3] overflow-hidden bg-muted relative">
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
+                <Badge className="absolute top-3 left-3 bg-foreground/80 backdrop-blur-sm text-background">
+                  {project.category}
+                </Badge>
               </div>
               <CardContent className="p-6">
-                <div className="inline-block px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-medium mb-3">
-                  {project.category}
+                <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">{project.title}</h3>
+                <p className="text-sm text-muted-foreground mb-4 line-clamp-3">{project.description}</p>
+                <div className="flex items-center justify-between pt-3 border-t border-border">
+                  <span className="text-xs font-semibold text-primary flex items-center gap-1">
+                    <Building2 className="w-3.5 h-3.5" /> Product: {project.productName}
+                  </span>
+                  <span className="text-xs font-bold text-foreground flex items-center group-hover:translate-x-1 transition-transform">
+                    View Specs <ArrowRight className="w-3.5 h-3.5 ml-1" />
+                  </span>
                 </div>
-                <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-                <p className="text-sm text-muted-foreground">{project.description}</p>
               </CardContent>
             </Card>
           ))}
         </div>
 
-        <div className="mt-16 bg-muted/30 p-8 rounded-lg">
-          <h2 className="text-2xl font-bold mb-6 text-center">Industries We Serve</h2>
+        <div className="mt-16 bg-muted/30 p-8 rounded-xl border border-border">
+          <h2 className="text-2xl font-bold mb-6 text-center">Industries We Serve Across India</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-            <div className="p-4">
-              <p className="font-semibold">Manufacturing</p>
+            <div className="p-4 bg-background rounded-lg shadow-sm border border-border">
+              <p className="font-semibold text-foreground">Heavy Manufacturing</p>
             </div>
-            <div className="p-4">
-              <p className="font-semibold">Construction</p>
+            <div className="p-4 bg-background rounded-lg shadow-sm border border-border">
+              <p className="font-semibold text-foreground">Infrastructure & EPC</p>
             </div>
-            <div className="p-4">
-              <p className="font-semibold">Oil & Gas</p>
+            <div className="p-4 bg-background rounded-lg shadow-sm border border-border">
+              <p className="font-semibold text-foreground">Oil & Gas Refineries</p>
             </div>
-            <div className="p-4">
-              <p className="font-semibold">Power Generation</p>
+            <div className="p-4 bg-background rounded-lg shadow-sm border border-border">
+              <p className="font-semibold text-foreground">Thermal & Hydro Power</p>
             </div>
-            <div className="p-4">
-              <p className="font-semibold">Chemical Processing</p>
+            <div className="p-4 bg-background rounded-lg shadow-sm border border-border">
+              <p className="font-semibold text-foreground">Chemical & Petrochemical</p>
             </div>
-            <div className="p-4">
-              <p className="font-semibold">Food Industry</p>
+            <div className="p-4 bg-background rounded-lg shadow-sm border border-border">
+              <p className="font-semibold text-foreground">Pharma & Food Processing</p>
             </div>
-            <div className="p-4">
-              <p className="font-semibold">Mining</p>
+            <div className="p-4 bg-background rounded-lg shadow-sm border border-border">
+              <p className="font-semibold text-foreground">Mining & Heavy Earthmoving</p>
             </div>
-            <div className="p-4">
-              <p className="font-semibold">Infrastructure</p>
+            <div className="p-4 bg-background rounded-lg shadow-sm border border-border">
+              <p className="font-semibold text-foreground">Marine & Offshore</p>
             </div>
           </div>
         </div>

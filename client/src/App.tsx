@@ -13,7 +13,9 @@ import Products from "@/pages/Products";
 import Services from "@/pages/Services";
 import Projects from "@/pages/Projects";
 import Contact from "@/pages/Contact";
+import ProductDetail from "@/pages/ProductDetail";
 import NotFound from "@/pages/not-found";
+import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 
 function Router() {
   return (
@@ -23,6 +25,7 @@ function Router() {
         <Route path="/" component={Home} />
         <Route path="/about" component={About} />
         <Route path="/products" component={Products} />
+        <Route path="/product/:id" component={ProductDetail} />
         <Route path="/services" component={Services} />
         <Route path="/projects" component={Projects} />
         <Route path="/contact" component={Contact} />
@@ -43,6 +46,7 @@ function App() {
           </main>
           <Map />
           <Footer />
+          <FloatingWhatsApp />
         </div>
         <Toaster />
       </TooltipProvider>
